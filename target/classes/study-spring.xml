@@ -7,20 +7,30 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
 
-    <bean id="calculate" class="com.epam.Calc.CalcImpl"
-          scope="prototype">
+    <bean id="calculate" class="com.epam.Calc.CalcImpl">
+        <constructor-arg ref="propsFile" />
             </bean>
 
-    <bean id="calculateDiscount" class="com.epam.Calc.CalcDiscountImpl"
-          scope="prototype">
+    <bean id="calculateDiscount" class="com.epam.Calc.CalcDiscountImpl">
+        <constructor-arg ref="propsFile"/>
     </bean>
 
-    <bean id="shippingprice" class="com.epam.Controller.CalculationOfTruckShipping">
+    <bean id="shippingprice" class="com.epam.Controller.CalculationOfTruckShipping"
+          scope="prototype">
         <constructor-arg ref="calculate" />
     </bean>
 
-    <bean id="shippingpriceDiscount" class="com.epam.Controller.CalculationOfTruckShipping">
+    <bean id="shippingpriceDiscount" class="com.epam.Controller.CalculationOfTruckShipping"
+          scope="prototype">
         <constructor-arg ref="calculateDiscount" />
     </bean>
+
+    <bean id="propsFile" class="com.epam.Streams.Props">
+        <constructor-arg ref="prices" />
+         </bean>
+
+    <bean id="prices" class="com.epam.DataModules.PriceShipping">
+    </bean>
+
 
 </beans>

@@ -24,7 +24,7 @@ public class App
         shipping.getResultOfShipping();
 
         Calc performerDiscount = (Calc) ctx.getBean("calculateDiscount");
-        ControllerInterface shippingDiscount = (ControllerInterface) ctx.getBean("shippingpriceDiscount");
-        shippingDiscount.getResultOfShipping();
+        shipping = (ControllerInterface) ctx.getBean("shippingpriceDiscount");
+        shipping.getResultOfShipping();
     }
 }

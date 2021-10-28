@@ -1,5 +1,7 @@
 package com.epam.Calc;
 
+import com.epam.Streams.PropsInterface;
+
 import java.math.BigDecimal;
 
 public interface Calc {

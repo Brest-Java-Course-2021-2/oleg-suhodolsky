@@ -1,1 +1,10 @@
+com/epam/Streams/Props.class
+com/epam/Streams/Scan.class
+com/epam/Calc/CalcDiscountImpl.class
 com/epam/App.class
+com/epam/Calc/Calc.class
+com/epam/Streams/PropsInterface.class
+com/epam/Controller/CalculationOfTruckShipping.class
+com/epam/Controller/ControllerInterface.class
+com/epam/DataModules/PriceShipping.class
+com/epam/Calc/CalcImpl.class

@@ -2,11 +2,14 @@ package com.epam.Calc;
 
 import com.epam.DataModules.PriceShipping;
 import com.epam.Streams.Props;
+import com.epam.Streams.PropsInterface;
 
 import java.math.BigDecimal;
 
 public class CalcImpl implements Calc {
-    public CalcImpl() {
+    PropsInterface props;
+    public CalcImpl(PropsInterface props) {
+    this.props = props;
     }
 
 
@@ -18,7 +21,6 @@ public class CalcImpl implements Calc {
         BigDecimal pricePerKm;
 
        PriceShipping priceShipping = new PriceShipping();
-       Props props = new Props(priceShipping);
        priceShipping = props.getProperties();
 
        if (weight.compareTo(priceShipping.getSmall()) == -1){

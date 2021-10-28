@@ -7,15 +7,14 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Properties;
 
-public class Props {
+public class Props implements PropsInterface {
 
-    public static final String PATH_TO_PROPERTIES = "src/main/resources/pricecoef.properties";
     FileInputStream fileInputStream;
     Properties prop;
     PriceShipping priceShipping;
 
     public Props(PriceShipping priceShipping) {
-        this.priceShipping = priceShipping;
+                this.priceShipping = priceShipping;
     }
 
     public PriceShipping getProperties() {
